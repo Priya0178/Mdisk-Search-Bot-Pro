@@ -10,7 +10,7 @@ import requests
 async def replace_username(text):
 	usernames = re.findall("([@#][A-Za-z0-9_]+)", text)
 	async for i in AsyncIter(usernames):
-		text = text.replace(i, f"How to download @{Config.UPDATES_CHANNEL_USERNAME}")
+		text = text.replace(i, f"@{Config.UPDATES_CHANNEL_USERNAME}")
 	return text
 
 
